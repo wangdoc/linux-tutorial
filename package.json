@@ -1,0 +1,28 @@
+{
+  "name": "linux-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "loppo --site \"Linux 教程\" --id linux --theme wangdoc",
+    "build-and-commit": "npm run build && npm run commit",
+    "commit": "gh-pages --dist dist --dest dist/linux --branch master --repo git@github.com:wangdoc/website.git",
+    "chapter": "loppo chapter",
+    "server": "loppo server"
+  },
+  "keywords": [
+    "wangdoc",
+    "document",
+    "linux"
+  ],
+  "author": "Ruan Yifeng",
+  "license": "CC-BY-SA-4.0",
+  "description": "",
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "loppo": "^0.6.26",
+    "loppo-theme-wangdoc": "^0.7.1"
+  }
+}

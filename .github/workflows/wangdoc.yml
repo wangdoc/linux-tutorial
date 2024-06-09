@@ -1,0 +1,36 @@
+name: Linux tutorial CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  page-generator:
+    name: Generating pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      - name: Install dependencies
+        run: npm install
+      - name: Build pages
+        run: npm run build
+      - name: Deploy to website
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          git-config-name: wangdoc-bot
+          git-config-email: yifeng.ruan@gmail.com
+          repository-name: wangdoc/website
+          token: ${{ secrets.WANGDOC_BOT_TOKEN }}
+          branch: master # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          target-folder: dist/linux
+          clean: true # Automatically remove deleted files from the deploy branch
+          commit-message: update from Linux tutorial
+

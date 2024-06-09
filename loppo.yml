@@ -6,3 +6,7 @@ customization: false
 themeDir: loppo-theme
 direction: ltr
 id: linux
+branch: main
+hasComments: true
+isTutorial: true
+

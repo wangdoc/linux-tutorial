@@ -25,7 +25,7 @@ $ sudo pacman -Ss vlc
 `-Si`用来获取软件包的详细信息。
 
 ```bash
-pacman -Si nginx
+$ pacman -Si nginx
 ```
 
 `-S`用来安装软件包。
@@ -113,6 +113,67 @@ $ sudo pacman -Sc
 
 ```bash
 $ sudo pacman -Scc
+```
+
+## AUR 软件仓库
+
+AUR （Arch User Repository）是 Arch 的非官方软件仓库，官方不负责维护，由网友维护。
+
+这时可以安装 yay，帮助管理 AUR 软件包。
+
+```bash
+$ sudo pacman -S git base-devel
+$ git clone https://aur.archlinux.org/yay-bin.git
+$ cd yay-bin
+$ makepkg -si
+```
+
+然后，使用下面的命令，查看是否安装成功。
+
+```bash
+$ yay --version
+```
+
+`-Ss`用来搜索软件包，这会同时包括官方仓库和 AUR。
+
+```bash
+$ yay -Ss dash-to-dock
+```
+
+如果只在 AUR 搜索，`-Ss`都不需要。
+
+```bash
+$ yay dash-to-dock
+```
+
+`-S`用来安装软件包。
+
+```bash
+$ yay -S gnome-shell-extension-dash-to-dock
+```
+
+`-Sua`用来更新所有已经安装的 AUR 软件包。
+
+```bash
+$ yay -Sua
+```
+
+`-Ps`用来查看系统统计信息。AUR 下载所有软包都保存在目录`~/.cache/yay/`。
+
+```bash
+$ yay -Ps
+```
+
+`-Sc`用来清除已经下载的 AUR 文件。
+
+```bash
+$ yay -Sc
+```
+
+`-Scc`用来删除所有不需要的依赖项以及所有缓存的包文件。
+
+```bash
+$ yay -Scc
 ```
 
 ## 选择下载镜像

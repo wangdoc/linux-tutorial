@@ -2,3 +2,5 @@
 - cron.md: Cron 定时任务
 - systemd.md: SystemD
 - xargs.md: xargs 命令
+- distro/: 发行版
+- distro/arch.md: Arch Linux

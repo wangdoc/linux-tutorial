@@ -35,7 +35,14 @@ $ hostnamectl
 `uname`命令可以显示系统信息，包含 Linux 内核架构、名称、发布版。
 
 ```bash
+# 所有信息
 $ uname -a
+
+# 操作系统
+$ uname -o
+
+# 内核版本
+$ uname -r
 ```
 
 （5）`lsb-release`命令
@@ -53,3 +60,4 @@ $ lsb-release
 ```bash
 $ cat /proc/version
 ```
+

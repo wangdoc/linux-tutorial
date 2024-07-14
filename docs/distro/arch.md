@@ -145,6 +145,18 @@ $ makepkg -si
 $ yay --version
 ```
 
+`-S`用来安装软件包。
+
+```bash
+$ yay -S packageName
+```
+
+`-Sua`用来更新所有已经安装的 AUR 软件包。
+
+```bash
+$ yay -Sua
+```
+
 `-Syu`用来更新系统所有软件包。
 
 ```bash
@@ -154,25 +166,13 @@ $ sudo yay -Syu
 `-Ss`用来搜索软件包，这会同时包括官方仓库和 AUR。
 
 ```bash
-$ yay -Ss dash-to-dock
+$ yay -Ss packageName
 ```
 
 如果只在 AUR 搜索，`-Ss`都不需要。
 
 ```bash
-$ yay dash-to-dock
-```
-
-`-S`用来安装软件包。
-
-```bash
-$ yay -S packagename
-```
-
-`-Sua`用来更新所有已经安装的 AUR 软件包。
-
-```bash
-$ yay -Sua
+$ yay packageName
 ```
 
 `-R`用来删除软件包。

@@ -3,6 +3,7 @@
 - file-system.md: 文件系统
 - cron.md: Cron 定时任务
 - systemd.md: SystemD
+- hardware.md: 硬件管理
 - xargs.md: xargs 命令
 - distro/: 发行版
 - distro/arch.md: Arch Linux
